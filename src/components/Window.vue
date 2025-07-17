@@ -1,24 +1,23 @@
 <template>
-  <div class="home">
-    <Dashboard/>
+  <div class="window">
+    <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Dashboard from '@/components/Dashboard.vue';
 
 export default defineComponent({
-  name: 'HomeView',
-  components: {
-    Dashboard,
-  },
+  name: 'Window',
 });
 </script>
 
 <style scoped lang="scss">
-.home {
-  width: 100%;
+.window {
   height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
 }
 </style>

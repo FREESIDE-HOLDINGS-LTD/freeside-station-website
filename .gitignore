@@ -21,3 +21,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+model/_render
+model/*.blend1
+public/video.mp4
