@@ -51,7 +51,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
 
-  font-size: 10px;
+  font-size: 14px;
 
   display: flex;
   flex-flow: row nowrap;
