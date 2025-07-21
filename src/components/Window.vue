@@ -36,6 +36,7 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 1em;
   overflow-y: hidden;
+  overflow-x: hidden;
 
   .wrapper {
     box-sizing: border-box;
@@ -44,6 +45,7 @@ export default defineComponent({
     border: 1px solid #fff;
     padding: 1em;
     overflow-y: scroll;
+    overflow-x: hidden;
 
     display: flex;
     flex-flow: column nowrap;
