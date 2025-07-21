@@ -3,7 +3,7 @@ all: website push
 
 .PHONY: video
 video:
-	ffmpeg -framerate 24 -pattern_type glob -i 'model/_render/*.png' -c:v libsvtav1 -crf 35 public/video.mp4
+	ffmpeg -framerate 24 -pattern_type glob -i 'model/_render/*.png' -c:v libsvtav1 -crf 35 -filter:v scale=720:-1 public/video.mp4
 
 
 .PHONY: website
