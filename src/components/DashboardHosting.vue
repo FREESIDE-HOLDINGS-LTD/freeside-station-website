@@ -1,18 +1,25 @@
 <template>
-  <Window class="dashboard-transmitters">
+  <Window class="dashboard-hosting">
     <WindowTitle>
-      Broadcasts
+      Hosting
     </WindowTitle>
     <WindowContent>
       <table>
         <tbody>
           <tr>
             <td>
-              <a href="https://chaos.social/@freeside">https://chaos.social/@freeside</a>
+              <a href="https://freeside.ltd">freeside.ltd</a>
             </td>
             <td>
-              <ChangingNumber :min="6.1" :max="6.2" :precision="1"></ChangingNumber>
-              MW
+              <Green>live</Green>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://industries.freeside.ltd">industries.freeside.ltd</a>
+            </td>
+            <td>
+              <Green>live</Green>
             </td>
           </tr>
         </tbody>
@@ -26,7 +33,7 @@ import { defineComponent } from 'vue';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
-import ChangingNumber from '@/components/ChangingNumber.vue';
+import Green from '@/components/Green.vue';
 
 export default defineComponent({
   name: 'DashboardTransmitters',
@@ -34,7 +41,7 @@ export default defineComponent({
     Window,
     WindowContent,
     WindowTitle,
-    ChangingNumber,
+    Green,
   },
 });
 </script>

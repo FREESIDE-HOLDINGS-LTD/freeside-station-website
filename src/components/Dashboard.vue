@@ -9,6 +9,7 @@
       <DashboardVideo></DashboardVideo>
       <DashboardComms></DashboardComms>
       <DashboardTransmitters></DashboardTransmitters>
+      <DashboardHosting></DashboardHosting>
     </div>
     <div class="column right">
       <DashboardArrivals></DashboardArrivals>
@@ -23,6 +24,7 @@ import DashboardOrbit from '@/components/DashboardOrbit.vue';
 import DashboardSystems from '@/components/DashboardSystems.vue';
 import DashboardComms from '@/components/DashboardComms.vue';
 import DashboardTransmitters from '@/components/DashboardTransmitters.vue';
+import DashboardHosting from '@/components/DashboardHosting.vue';
 import DashboardAbout from '@/components/DashboardAbout.vue';
 import DashboardArrivals from '@/components/DashboardArrivals.vue';
 import DashboardDepartures from '@/components/DashboardDepartures.vue';
@@ -36,6 +38,7 @@ export default defineComponent({
     DashboardAbout,
     DashboardComms,
     DashboardTransmitters,
+    DashboardHosting,
     DashboardArrivals,
     DashboardDepartures,
     DashboardVideo,
