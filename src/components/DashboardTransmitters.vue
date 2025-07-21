@@ -1,11 +1,22 @@
 <template>
-  <Window class="dashboard-about">
+  <Window class="dashboard-comms">
     <WindowTitle>
-      Freeside Station
+      Broadcasts
     </WindowTitle>
     <WindowContent>
-      <div>Build 19840701</div>
-      <div>Copyright <span class="japanese">営団</span>Freeside</div>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://chaos.social/@freeside">https://chaos.social/@freeside</a>
+            </td>
+            <td>
+              <ChangingNumber :min="6.1" :max="6.2" :precision="1"></ChangingNumber>
+              MW
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </WindowContent>
   </Window>
 </template>
@@ -15,13 +26,15 @@ import { defineComponent } from 'vue';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
+import ChangingNumber from '@/components/ChangingNumber.vue';
 
 export default defineComponent({
-  name: 'DashboardAbout',
+  name: 'DashboardTransmitters',
   components: {
     Window,
     WindowContent,
     WindowTitle,
+    ChangingNumber,
   },
 });
 </script>
@@ -37,9 +50,5 @@ table {
   td:last-child {
     text-align: right;
   }
-}
-
-.japanese {
-  font-family: 'M PLUS 1 Code';
 }
 </style>

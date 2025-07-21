@@ -1,6 +1,6 @@
 <template>
-  <span class="restricted">
-      restricted
+  <span class="green">
+    <slot></slot>
   </span>
 </template>
 
@@ -8,13 +8,13 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Restricted',
+  name: 'Green',
 });
 </script>
 
 <style scoped lang="scss">
-.restricted {
-  color: var(--color-restricted);
+.green {
+  color: var(--green);
   font-weight: bold;
 }
 </style>

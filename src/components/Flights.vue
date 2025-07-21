@@ -89,5 +89,9 @@ export default defineComponent({
 table {
   width: 100%;
   text-align: left;
+
+  td {
+    padding: .2em;
+  }
 }
 </style>

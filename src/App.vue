@@ -3,6 +3,14 @@
 </template>
 
 <style lang="scss">
+@font-face {
+  font-family: 'M PLUS 1 Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/public/M_PLUS_1_Code/static/MPLUS1Code-Regular.ttf') format('truetype');
+}
+
 body, html {
   background-color: var(--color-background);
   margin: 0;
@@ -22,6 +30,10 @@ body, html, #app {
   color: var(--color-foreground);
 }
 
+a {
+  color: var(--color-foreground);
+}
+
 :root {
   --white: #fff;
   --black: #000;
@@ -30,6 +42,5 @@ body, html, #app {
 
   --color-background: var(--black);
   --color-foreground: var(--white);
-  --color-restricted: var(--red);
 }
 </style>

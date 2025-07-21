@@ -11,7 +11,7 @@
             <i>e</i>
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         <tr>
@@ -19,7 +19,7 @@
             <i>a</i>
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         <tr>
@@ -27,7 +27,7 @@
             <i>i</i>
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             Ω
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@
             <i>ω</i>
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
             M
           </td>
           <td>
-            <Restricted></Restricted>
+            <Red>restricted</Red>
           </td>
         </tr>
         </tbody>
@@ -65,7 +65,7 @@ import { defineComponent } from 'vue';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
-import Restricted from '@/components/Restricted.vue';
+import Red from '@/components/Red.vue';
 
 export default defineComponent({
   name: 'DashboardOrbit',
@@ -73,7 +73,7 @@ export default defineComponent({
     Window,
     WindowContent,
     WindowTitle,
-    Restricted,
+    Red,
   },
 });
 </script>

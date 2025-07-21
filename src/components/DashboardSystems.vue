@@ -8,10 +8,12 @@
         <tbody>
           <tr>
             <td>
-              Life support
+              Reactor output
             </td>
             <td>
-              online
+              <Green>
+                <ChangingNumber :min="27.1" :max="27.2" :precision="2"></ChangingNumber> GW
+              </Green>
             </td>
           </tr>
           <tr>
@@ -19,15 +21,15 @@
               Attitude control
             </td>
             <td>
-              online
+              <Green>online</Green>
             </td>
           </tr>
           <tr>
             <td>
-              Signature scrambling
+              Orbit change
             </td>
             <td>
-              online
+              <Green>scheduled</Green>
             </td>
           </tr>
           <tr>
@@ -35,7 +37,15 @@
               Life support
             </td>
             <td>
-              online
+              <Green>online</Green>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Pool on the roof
+            </td>
+            <td>
+              <Red>leaking</Red>
             </td>
           </tr>
         </tbody>
@@ -49,6 +59,9 @@ import { defineComponent } from 'vue';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
+import ChangingNumber from '@/components/ChangingNumber.vue';
+import Green from '@/components/Green.vue';
+import Red from '@/components/Red.vue';
 
 export default defineComponent({
   name: 'DashboardSystems',
@@ -56,6 +69,9 @@ export default defineComponent({
     Window,
     WindowContent,
     WindowTitle,
+    ChangingNumber,
+    Green,
+    Red,
   },
 });
 </script>
@@ -70,7 +86,6 @@ table {
 
   td:last-child {
     text-align: right;
-    color: var(--green);
   }
 }
 </style>
