@@ -77,4 +77,17 @@ export default defineComponent({
     }
   }
 }
+
+@media (max-width: 1600px) {
+  .dashboard {
+    flex-flow: column nowrap;
+    height: auto;
+
+    .column {
+      &.left, &.right {
+        width: auto;
+      }
+    }
+  }
+}
 </style>

@@ -44,4 +44,11 @@ a {
   --color-background: var(--black);
   --color-foreground: var(--white);
 }
+
+@media (max-width: 1600px) {
+  .body, html, #app {
+    height: auto;
+    overflow: scroll;
+  }
+}
 </style>
