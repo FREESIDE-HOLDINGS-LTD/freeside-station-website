@@ -1,13 +1,27 @@
 <template>
   <div class="dashboard">
-    <DashboardArrivals></DashboardArrivals>
-    <DashboardDepartures></DashboardDepartures>
-    <DashboardVideo></DashboardVideo>
+    <div class="column left">
+      <DashboardAbout></DashboardAbout>
+      <DashboardOrbit></DashboardOrbit>
+      <DashboardSystems></DashboardSystems>
+    </div>
+    <div class="column center">
+      <DashboardVideo></DashboardVideo>
+      <DashboardComms></DashboardComms>
+    </div>
+    <div class="column right">
+      <DashboardArrivals></DashboardArrivals>
+      <DashboardDepartures></DashboardDepartures>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import DashboardOrbit from '@/components/DashboardOrbit.vue';
+import DashboardSystems from '@/components/DashboardSystems.vue';
+import DashboardComms from '@/components/DashboardComms.vue';
+import DashboardAbout from '@/components/DashboardAbout.vue';
 import DashboardArrivals from '@/components/DashboardArrivals.vue';
 import DashboardDepartures from '@/components/DashboardDepartures.vue';
 import DashboardVideo from '@/components/DashboardVideo.vue';
@@ -15,6 +29,10 @@ import DashboardVideo from '@/components/DashboardVideo.vue';
 export default defineComponent({
   name: 'Dashboard',
   components: {
+    DashboardOrbit,
+    DashboardSystems,
+    DashboardAbout,
+    DashboardComms,
     DashboardArrivals,
     DashboardDepartures,
     DashboardVideo,
@@ -27,26 +45,30 @@ export default defineComponent({
   width: 100%;
   height: 100%;
 
-  display: grid;
-  grid-template-columns:
-      20% 60% 20%;
-  grid-template-rows:
-      auto;
-  grid-template-areas:
-    "arrivals video departures"
-    "arrivals video departures"
-    "arrivals video departures";
-}
+  font-size: 10px;
 
-.dashboard-arrivals {
-    grid-area: arrivals;
-}
+  display: flex;
+  flex-flow: row nowrap;
 
-.dashboard-departures {
-    grid-area: departures;
-}
+  .column {
+    display: flex;
+    flex-flow: column nowrap;
 
-.dashboard-video {
-    grid-area: video;
+    &.left {
+      width: 20%;
+    }
+
+    &.right {
+      width: 40%;
+    }
+
+    &.center {
+      flex: 1;
+    }
+
+    >:last-child, .dashboard-departures, .dashboard-arrivals {
+      flex: 1;
+    }
+  }
 }
 </style>

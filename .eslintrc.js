@@ -17,5 +17,7 @@ module.exports = {
 
     'vue/multi-word-component-names': 'off',
     'vuejs-accessibility/media-has-caption': 'off',
+    'max-len': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 };

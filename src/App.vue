@@ -4,7 +4,7 @@
 
 <style lang="scss">
 body, html {
-  background-color: #000;
+  background-color: var(--color-background);
   margin: 0;
   padding: 0;
 }
@@ -15,10 +15,21 @@ body, html, #app {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--color-foreground);
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --red: #c0392b;
+  --green: #27ae60;
+
+  --color-background: var(--black);
+  --color-foreground: var(--white);
+  --color-restricted: var(--red);
 }
 </style>

@@ -1,21 +1,20 @@
 <template>
-  <div class="window-title">
-    <slot></slot>
-  </div>
+  <span class="restricted">
+      restricted
+  </span>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'WindowTitle',
+  name: 'Restricted',
 });
 </script>
 
 <style scoped lang="scss">
-.window-title {
-  font-size: 24px;
-  text-transform: uppercase;
-  text-align: center;
+.restricted {
+  color: var(--color-restricted);
+  font-weight: bold;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="window">
-    <slot></slot>
+    <div class="wrapper">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -14,10 +16,20 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .window {
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  overflow-y: hidden;
 
-  display: flex;
-  flex-flow: column nowrap;
+  .wrapper {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 1em;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
 </style>
