@@ -2,14 +2,19 @@
   <div class="dashboard">
     <div class="column left">
       <DashboardAbout></DashboardAbout>
-      <DashboardOrbit></DashboardOrbit>
-      <DashboardSystems></DashboardSystems>
-    </div>
-    <div class="column center">
       <DashboardVideo></DashboardVideo>
-      <DashboardComms></DashboardComms>
-      <DashboardTransmitters></DashboardTransmitters>
-      <DashboardHosting></DashboardHosting>
+
+      <div class="below-video">
+        <div>
+          <DashboardOrbit></DashboardOrbit>
+          <DashboardSystems></DashboardSystems>
+        </div>
+        <div>
+          <DashboardComms></DashboardComms>
+          <DashboardTransmitters></DashboardTransmitters>
+          <DashboardHosting></DashboardHosting>
+        </div>
+      </div>
     </div>
     <div class="column right">
       <DashboardArrivals></DashboardArrivals>
@@ -61,19 +66,39 @@ export default defineComponent({
     flex-flow: column nowrap;
 
     &.left {
-      width: 20%;
+      width: 50%;
+
+      .dasboard-about {
+        flex-shrink: 0;
+      }
+
+      .dashboard-video {
+        flex-shrink: 10;
+      }
+
+      .below-video {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1;
+
+        >* {
+          width: 50%;
+          display: flex;
+          flex-flow: column nowrap;
+
+          >*:last-child {
+            flex: 1;
+          }
+        }
+      }
     }
 
     &.right {
       width: 50%;
-    }
 
-    &.center {
-      flex: 1;
-    }
-
-    >:last-child, .dashboard-departures, .dashboard-arrivals {
-      flex: 1;
+      .dashboard-departures, .dashboard-arrivals {
+        flex: 1;
+      }
     }
   }
 }
@@ -86,6 +111,16 @@ export default defineComponent({
     .column {
       &.left, &.right {
         width: auto;
+      }
+
+      &.left {
+        .below-video {
+          flex-flow: column nowrap;
+
+          >* {
+            width: auto;
+          }
+        }
       }
     }
   }
