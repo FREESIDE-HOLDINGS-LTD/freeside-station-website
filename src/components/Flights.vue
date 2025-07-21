@@ -29,7 +29,7 @@
         </td>
         <td>
           <div v-if="arrivals && hasDatePassed(flight.date) < 0">
-            LANDED
+            ARRIVED
           </div>
           <div v-if="arrivals && hasDatePassed(flight.date) == 0">
             ARRIVING

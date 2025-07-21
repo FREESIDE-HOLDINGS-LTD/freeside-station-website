@@ -8,9 +8,26 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { PowerGlitch } from 'powerglitch';
 
 export default defineComponent({
   name: 'Window',
+  mounted() {
+    const options = {
+      timing: {
+        duration: 10000,
+      },
+      glitchTimeSpan: {
+        end: 0.6,
+      },
+      shake: {
+        amplitudeX: 0.02,
+        amplitudeY: 0.02,
+      },
+    };
+    PowerGlitch.glitch('.window-title', options);
+    PowerGlitch.glitch('.window-content', options);
+  },
 });
 </script>
 
