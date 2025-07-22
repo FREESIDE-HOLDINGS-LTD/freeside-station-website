@@ -43,6 +43,10 @@ a {
 
   --color-background: var(--black);
   --color-foreground: var(--white);
+
+  --window-border-color: var(--white);
+  --window-border-thickness: 1px;
+  --window-padding: 20px;
 }
 
 @media (max-width: 1600px) {

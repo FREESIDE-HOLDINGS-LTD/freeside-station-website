@@ -20,5 +20,6 @@ export default defineComponent({
 <style scoped lang="scss">
   .window-content {
     flex: 1;
+    padding: var(--window-padding);
   }
 </style>

@@ -22,5 +22,7 @@ export default defineComponent({
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: var(--window-border-thickness) solid var(--window-border-color);
+  padding: var(--window-padding);
 }
 </style>

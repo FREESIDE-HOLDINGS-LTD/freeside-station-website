@@ -25,8 +25,7 @@ export default defineComponent({
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    border: 1px solid #fff;
-    padding: 1em;
+    border: var(--window-border-thickness) solid var(--window-border-color);
     overflow-y: scroll;
     overflow-x: hidden;
 
