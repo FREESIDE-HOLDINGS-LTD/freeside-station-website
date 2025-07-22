@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { Flight, flightNumber } from '@/domain/Flight';
+import { Flight } from '@/domain/Flight';
 import { events } from '@/data/events';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
@@ -28,14 +28,7 @@ export default defineComponent({
   },
   computed: {
     flights(): Flight[] {
-      return events
-        .map((event) => (
-          {
-            date: event.end,
-            number: flightNumber(event),
-            direction: event.location,
-          }
-        ));
+      return events.map((event) => new Flight(event));
     },
   },
 });

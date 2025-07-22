@@ -11,38 +11,41 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="flight in flights" :key="flight.date">
+      <tr v-for="flight in flights" :key="flight.date" :class="{ blink: flight.offStation() }">
         <td>
-          {{ flight.date.year }}-{{ String(flight.date.month).padStart(2, '0') }}-{{ String(flight.date.day).padStart(2, '0') }}
+          {{ date(flight) }}
         </td>
         <td>
-          {{ String(Math.floor(Math.random() * 24) + 1).padStart(2, '0') }}:{{ String(Math.floor(Math.random() * 60) + 1).padStart(2, '0') }}
+          {{ time() }}
         </td>
         <td>
-          {{ flight.number }}
+          {{ flight.number() }}
         </td>
         <td>
-          {{ flight.direction }}
+          {{ flight.direction() }}
         </td>
         <td>
-          {{ String(Math.floor(Math.random() * 12) + 1).padStart(2, '0') }}
+          {{ flight.pad() }}
         </td>
         <td>
-          <Red v-if="arrivals && hasDatePassed(flight.date) < 0">
-            ARRIVED
-          </Red>
-          <Green v-if="arrivals && hasDatePassed(flight.date) == 0" class="active">
-            ARRIVING
-          </Green>
-          <Red v-if="!arrivals && hasDatePassed(flight.date) < 0">
-            DEPARTED
-          </Red>
-          <Green v-if="!arrivals && hasDatePassed(flight.date) == 0" class="active">
-            DEPARTING
-          </Green>
-          <Green v-if="hasDatePassed(flight.date) > 0">
+          <Green v-if="arrivals && flight.statusArrivalScheduled()">
             SCHEDULED
           </Green>
+          <Red v-if="arrivals && flight.statusArrived()">
+            ARRIVED
+          </Red>
+          <Yellow v-if="arrivals && flight.statusArriving()">
+            ARRIVING
+          </Yellow>
+          <Green v-if="!arrivals && flight.statusDepartureScheduled()">
+            SCHEDULED
+          </Green>
+          <Red v-if="!arrivals && flight.statusDeparted()">
+            DEPARTED
+          </Red>
+          <Yellow v-if="!arrivals && flight.statusDeparting()">
+            DEPARTING
+          </Yellow>
         </td>
       </tr>
     </tbody>
@@ -52,9 +55,10 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { Flight } from '@/domain/Flight';
-import { Date, hasDatePassed } from '@/domain/Date';
+import { Date } from '@/domain/Date';
 import Green from '@/components/Green.vue';
 import Red from '@/components/Red.vue';
+import Yellow from '@/components/Yellow.vue';
 
 export default defineComponent({
   name: 'Flights',
@@ -65,10 +69,22 @@ export default defineComponent({
   components: {
     Green,
     Red,
+    Yellow,
   },
   methods: {
-    hasDatePassed(v: Date): number {
-      return hasDatePassed(v);
+    date(v: Flight): string {
+      if (this.arrivals) {
+        return this.formatDate(v.arrivalDate());
+      }
+      return this.formatDate(v.departureDate());
+    },
+    time(): string {
+      const hour = String(Math.floor(Math.random() * 24) + 1).padStart(2, '0');
+      const minute = String(Math.floor(Math.random() * 60) + 1).padStart(2, '0');
+      return `${hour}:${minute}`;
+    },
+    formatDate(v: Date): string {
+      return `${v.year}-${String(v.month).padStart(2, '0')}-${String(v.day).padStart(2, '0')}`;
     },
   },
 });
@@ -87,7 +103,7 @@ table {
     }
   }
 
-  .active {
+  .blink {
     animation: blinker 2s step-start infinite;
   }
 

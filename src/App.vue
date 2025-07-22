@@ -40,6 +40,7 @@ a {
   --black: #000;
   --red: #c0392b;
   --green: #27ae60;
+  --yellow: #f39c12;
 
   --color-background: var(--black);
   --color-foreground: var(--white);

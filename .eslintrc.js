@@ -19,5 +19,8 @@ module.exports = {
     'vuejs-accessibility/media-has-caption': 'off',
     'max-len': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-useless-constructor': 'off',
+    'import/prefer-default-export': 'off',
+    'class-methods-use-this': 'off',
   },
 };
