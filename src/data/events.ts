@@ -1,4 +1,4 @@
-import { Date } from '@/types/Date';
+import { Date } from '@/domain/Date';
 
 export interface Event {
     name: string,

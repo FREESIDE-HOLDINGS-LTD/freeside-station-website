@@ -19,7 +19,7 @@
           {{ String(Math.floor(Math.random() * 24) + 1).padStart(2, '0') }}:{{ String(Math.floor(Math.random() * 60) + 1).padStart(2, '0') }}
         </td>
         <td>
-          {{ flight.number.toUpperCase().replaceAll(' ', '') }}{{ flight.date.year }}
+          {{ flight.number }}
         </td>
         <td>
           {{ flight.direction }}
@@ -28,24 +28,21 @@
           {{ String(Math.floor(Math.random() * 12) + 1).padStart(2, '0') }}
         </td>
         <td>
-          <div v-if="arrivals && hasDatePassed(flight.date) < 0">
+          <Red v-if="arrivals && hasDatePassed(flight.date) < 0">
             ARRIVED
-          </div>
-          <div v-if="arrivals && hasDatePassed(flight.date) == 0">
+          </Red>
+          <Green v-if="arrivals && hasDatePassed(flight.date) == 0" class="active">
             ARRIVING
-          </div>
-          <div v-if="arrivals && hasDatePassed(flight.date) > 0">
-            SCHEDULED
-          </div>
-          <div v-if="!arrivals && hasDatePassed(flight.date) < 0">
+          </Green>
+          <Red v-if="!arrivals && hasDatePassed(flight.date) < 0">
             DEPARTED
-          </div>
-          <div v-if="!arrivals && hasDatePassed(flight.date) == 0">
+          </Red>
+          <Green v-if="!arrivals && hasDatePassed(flight.date) == 0" class="active">
             DEPARTING
-          </div>
-          <div v-if="!arrivals && hasDatePassed(flight.date) > 0">
+          </Green>
+          <Green v-if="hasDatePassed(flight.date) > 0">
             SCHEDULED
-          </div>
+          </Green>
         </td>
       </tr>
     </tbody>
@@ -54,8 +51,10 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import { Flight } from '@/types/Flight';
-import { Date as DateType } from '@/types/Date';
+import { Flight } from '@/domain/Flight';
+import { Date, hasDatePassed } from '@/domain/Date';
+import Green from '@/components/Green.vue';
+import Red from '@/components/Red.vue';
 
 export default defineComponent({
   name: 'Flights',
@@ -63,23 +62,13 @@ export default defineComponent({
     flights: Object as PropType<Flight[]>,
     arrivals: Boolean,
   },
+  components: {
+    Green,
+    Red,
+  },
   methods: {
-    hasDatePassed(v: DateType): number {
-      const today = new Date();
-      const targetDate = new Date(v.year, v.month - 1, v.day);
-
-      today.setHours(0, 0, 0, 0);
-      targetDate.setHours(0, 0, 0, 0);
-
-      if (targetDate < today) {
-        return -1;
-      }
-
-      if (targetDate > today) {
-        return 1;
-      }
-
-      return 0;
+    hasDatePassed(v: Date): number {
+      return hasDatePassed(v);
     },
   },
 });
@@ -90,8 +79,22 @@ table {
   width: 100%;
   text-align: left;
 
-  td {
+  td, th {
     padding: .2em;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  .active {
+    animation: blinker 2s step-start infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }
 }
 </style>
