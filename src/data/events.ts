@@ -9,6 +9,12 @@ export interface Event {
 
 export const events: Event[] = [
   {
+    name: 'Electromagnetic Field',
+    start: { year: 2026, month: 7, day: 16 },
+    end: { year: 2026, month: 7, day: 19 },
+    location: 'Eastnor, United Kingdom',
+  },
+  {
     name: 'Chaos Communication Congress',
     start: { year: 2025, month: 12, day: 27 },
     end: { year: 2025, month: 12, day: 30 },
