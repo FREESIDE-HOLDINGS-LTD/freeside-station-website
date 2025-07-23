@@ -27,6 +27,12 @@ export const events: Event[] = [
     location: 'Geestmerambacht, Netherlands',
   },
   {
+    name: 'Revision',
+    start: { year: 2025, month: 4, day: 18 },
+    end: { year: 2025, month: 4, day: 21 },
+    location: 'Saarbrücken, Germany',
+  },
+  {
     name: 'FOSDEM',
     start: { year: 2025, month: 2, day: 1 },
     end: { year: 2025, month: 2, day: 2 },

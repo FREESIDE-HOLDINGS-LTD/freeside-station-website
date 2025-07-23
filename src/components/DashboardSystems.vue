@@ -48,6 +48,14 @@
               <Red>leaking</Red>
             </td>
           </tr>
+          <tr>
+            <td>
+              Isopod colony
+            </td>
+            <td>
+              <Green>nominal</Green>
+            </td>
+          </tr>
         </tbody>
       </table>
     </WindowContent>
