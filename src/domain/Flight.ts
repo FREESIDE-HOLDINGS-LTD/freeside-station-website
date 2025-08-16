@@ -22,7 +22,7 @@ export class Flight {
   }
 
   arrivalDate(): Date {
-    return this.event.start;
+    return this.event.end;
   }
 
   offStation(): boolean {
