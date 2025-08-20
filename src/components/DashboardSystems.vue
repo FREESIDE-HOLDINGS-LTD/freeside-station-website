@@ -56,6 +56,14 @@
               <Green>nominal</Green>
             </td>
           </tr>
+          <tr>
+            <td>
+              Dome
+            </td>
+            <td>
+              <Green>banging</Green>
+            </td>
+          </tr>
         </tbody>
       </table>
     </WindowContent>
