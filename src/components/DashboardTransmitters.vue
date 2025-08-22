@@ -15,6 +15,15 @@
               MW
             </td>
           </tr>
+          <tr>
+            <td>
+              <a href="https://github.com/FREESIDE-HOLDINGS-LTD">https://github.com/FREESIDE-HOLDINGS-LTD</a>
+            </td>
+            <td>
+              <ChangingNumber :min="5.1" :max="5.5" :precision="1"></ChangingNumber>
+              MW
+            </td>
+          </tr>
         </tbody>
       </table>
     </WindowContent>
