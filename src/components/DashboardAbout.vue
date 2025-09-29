@@ -6,6 +6,7 @@
     <WindowContent>
       <div>Build 19840701</div>
       <div>Copyright <span class="japanese">営団</span>Freeside</div>
+      <div>{{ slogan }}</div>
     </WindowContent>
   </Window>
 </template>
@@ -22,6 +23,19 @@ export default defineComponent({
     Window,
     WindowContent,
     WindowTitle,
+  },
+  computed: {
+    slogan(): string {
+      const slogans = [
+        'Why wait?',
+        'Even those who are in fear missing out!',
+        'Don\'t believe his lies.',
+        'From Bell Labs.',
+        'Expires 1995.',
+        'No surrender.',
+      ];
+      return slogans[Math.floor(Math.random() * slogans.length)];
+    },
   },
 });
 </script>
