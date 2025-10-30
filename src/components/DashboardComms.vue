@@ -11,13 +11,15 @@
               #freeside@hackint
             </td>
             <td>
-              <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
-              Tbps
-              down
-              /
-              <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
-              Tbps
-              up
+              <White>
+                <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
+                Tbps
+                down
+                /
+                <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
+                Tbps
+                up
+              </White>
             </td>
           </tr>
           <tr>
@@ -25,13 +27,15 @@
               #milliways@hackint
             </td>
             <td>
-              <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
-              Tbps
-              down
-              /
-              <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
-              Tbps
-              up
+              <White>
+                <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
+                Tbps
+                down
+                /
+                <ChangingNumber :min="1" :max="25" :precision="2"></ChangingNumber>
+                Tbps
+                up
+              </White>
             </td>
           </tr>
         </tbody>
@@ -46,6 +50,7 @@ import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
 import ChangingNumber from '@/components/ChangingNumber.vue';
+import White from '@/components/White.vue';
 
 export default defineComponent({
   name: 'DashboardSystems',
@@ -54,6 +59,7 @@ export default defineComponent({
     WindowContent,
     WindowTitle,
     ChangingNumber,
+    White,
   },
 });
 </script>

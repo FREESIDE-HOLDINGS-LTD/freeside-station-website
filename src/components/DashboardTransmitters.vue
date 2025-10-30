@@ -11,8 +11,10 @@
               <a href="https://chaos.social/@freeside">https://chaos.social/@freeside</a>
             </td>
             <td>
-              <ChangingNumber :min="6.1" :max="6.2" :precision="1"></ChangingNumber>
-              MW
+              <White>
+                <ChangingNumber :min="6.1" :max="6.2" :precision="1"></ChangingNumber>
+                MW
+              </White>
             </td>
           </tr>
           <tr>
@@ -20,8 +22,10 @@
               <a href="https://github.com/FREESIDE-HOLDINGS-LTD">https://github.com/FREESIDE-HOLDINGS-LTD</a>
             </td>
             <td>
-              <ChangingNumber :min="5.1" :max="5.5" :precision="1"></ChangingNumber>
-              MW
+              <White>
+                <ChangingNumber :min="5.1" :max="5.5" :precision="1"></ChangingNumber>
+                MW
+              </White>
             </td>
           </tr>
         </tbody>
@@ -36,6 +40,7 @@ import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
 import WindowTitle from '@/components/WindowTitle.vue';
 import ChangingNumber from '@/components/ChangingNumber.vue';
+import White from '@/components/White.vue';
 
 export default defineComponent({
   name: 'DashboardTransmitters',
@@ -44,6 +49,7 @@ export default defineComponent({
     WindowContent,
     WindowTitle,
     ChangingNumber,
+    White,
   },
 });
 </script>
