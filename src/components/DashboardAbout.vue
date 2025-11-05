@@ -33,7 +33,9 @@ export default defineComponent({
         'From Bell Labs.',
         'Expires 1995.',
         'No surrender.',
-        'Red October. Red October. Halt and stay where you are.',
+        'Halt and stay where you are.',
+        'Nothing ever happens.',
+        'We just wanted a table.',
       ];
       return slogans[Math.floor(Math.random() * slogans.length)];
     },
