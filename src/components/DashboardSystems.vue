@@ -4,7 +4,7 @@
       Systems
     </WindowTitle>
     <WindowContent>
-      <table class="flights">
+      <table>
         <tbody>
           <tr>
             <td>

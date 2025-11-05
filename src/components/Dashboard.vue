@@ -13,6 +13,7 @@
           <DashboardComms></DashboardComms>
           <DashboardTransmitters></DashboardTransmitters>
           <DashboardHosting></DashboardHosting>
+          <DashboardPublicAddress></DashboardPublicAddress>
         </div>
       </div>
     </div>
@@ -34,6 +35,7 @@ import DashboardAbout from '@/components/DashboardAbout.vue';
 import DashboardArrivals from '@/components/DashboardArrivals.vue';
 import DashboardDepartures from '@/components/DashboardDepartures.vue';
 import DashboardVideo from '@/components/DashboardVideo.vue';
+import DashboardPublicAddress from '@/components/DashboardPublicAddress.vue';
 
 export default defineComponent({
   name: 'Dashboard',
@@ -47,6 +49,7 @@ export default defineComponent({
     DashboardArrivals,
     DashboardDepartures,
     DashboardVideo,
+    DashboardPublicAddress,
   },
 });
 </script>
