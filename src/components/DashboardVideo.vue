@@ -1,7 +1,7 @@
 <template>
   <Window class="dashboard-video">
     <WindowContent>
-      <video autoplay loop>
+      <video autoplay loop muted>
          <source src="video.mp4" type="video/mp4">
       </video>
     </WindowContent>
