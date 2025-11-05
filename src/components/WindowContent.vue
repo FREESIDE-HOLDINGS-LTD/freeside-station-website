@@ -18,8 +18,14 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.window-content {
+  flex: 1;
+  padding: var(--window-padding);
+}
+
+@media (max-height: 1500px) {
   .window-content {
-    flex: 1;
-    padding: var(--window-padding);
+    padding: calc(var(--window-padding) / 2);
   }
+}
 </style>

@@ -25,4 +25,11 @@ export default defineComponent({
   border-bottom: var(--window-border-thickness) solid var(--window-border-color);
   padding: var(--window-padding);
 }
+
+@media (max-height: 1500px) {
+  .window-title {
+    font-size: 12px;
+    padding: calc(var(--window-padding) / 2);
+  }
+}
 </style>
