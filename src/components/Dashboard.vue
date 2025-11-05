@@ -108,7 +108,21 @@ export default defineComponent({
 
 @media (max-width: 1800px) or (max-height: 1200px) {
   .dashboard {
-    font-size: 8px;
+    font-size: 10px;
+
+    .column {
+      &.left {
+        .below-video {
+          >*:first-child {
+            width: 40%;
+          }
+
+          >*:last-child {
+            width: 60%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -126,7 +140,7 @@ export default defineComponent({
         .below-video {
           flex-flow: column nowrap;
 
-          >* {
+          >*:first-child, >*:last-child {
             width: auto;
           }
         }
