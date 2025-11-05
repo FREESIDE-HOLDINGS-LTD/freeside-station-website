@@ -106,7 +106,13 @@ export default defineComponent({
   }
 }
 
-@media (max-width: 1600px) or (max-height: 1200px) {
+@media (max-width: 1800px) or (max-height: 1200px) {
+  .dashboard {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 1200px) or (max-height: 700px) {
   .dashboard {
     flex-flow: column nowrap;
     height: auto;
