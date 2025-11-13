@@ -4,8 +4,7 @@
       Freeside Station
     </WindowTitle>
     <WindowContent>
-      <div>Build 19840701</div>
-      <div>Copyright <span class="japanese">営団</span>Freeside</div>
+      <div>Build 19840701, copyright <span class="japanese">営団</span>Freeside</div>
       <div>{{ slogan }}</div>
     </WindowContent>
   </Window>
@@ -28,14 +27,13 @@ export default defineComponent({
     slogan(): string {
       const slogans = [
         'Why wait?',
+        'High tech/low life',
         'Even those who are in fear missing out!',
-        'Don\'t believe his lies.',
+        'Don\'t believe his lies!',
         'From Bell Labs.',
         'Expires 1995.',
-        'No surrender.',
-        'Halt and stay where you are.',
-        'Nothing ever happens.',
         'We just wanted a table.',
+        '100% Mothra-compatible!',
       ];
       return slogans[Math.floor(Math.random() * slogans.length)];
     },
