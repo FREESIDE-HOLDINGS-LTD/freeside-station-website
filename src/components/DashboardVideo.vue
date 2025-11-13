@@ -4,11 +4,6 @@
       <video autoplay loop muted ref="video">
         <source src="video.mp4" type="video/mp4">
       </video>
-      <div class="loading" v-if="!playing">
-        <SlowBlink>
-          RENDERING SIMULATION
-        </SlowBlink>
-      </div>
     </WindowContent>
   </Window>
 </template>
@@ -17,14 +12,12 @@
 import { defineComponent } from 'vue';
 import Window from '@/components/Window.vue';
 import WindowContent from '@/components/WindowContent.vue';
-import SlowBlink from '@/components/SlowBlink.vue';
 
 export default defineComponent({
   name: 'DashboardVideo',
   components: {
     Window,
     WindowContent,
-    SlowBlink,
   },
   mounted() {
     window.addEventListener('resize', this.resizeVideo);
