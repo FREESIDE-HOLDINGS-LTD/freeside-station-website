@@ -17,7 +17,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .window {
   box-sizing: border-box;
-  padding: 1em;
+  padding: calc(var(--window-padding) / 2);
   overflow-y: hidden;
   overflow-x: hidden;
 
@@ -31,6 +31,12 @@ export default defineComponent({
 
     display: flex;
     flex-flow: column nowrap;
+  }
+}
+
+@media (max-width: $media-query-squeeze-max-width) or (max-height: $media-query-squeeze-max-height) {
+  .window {
+    padding: calc(var(--window-padding) / 4);
   }
 }
 </style>

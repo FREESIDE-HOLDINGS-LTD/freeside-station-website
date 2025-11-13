@@ -26,7 +26,7 @@ export default defineComponent({
   padding: var(--window-padding);
 }
 
-@media (max-height: 1500px) {
+@media (max-width: $media-query-squeeze-max-width) or (max-height: $media-query-squeeze-max-height) {
   .window-title {
     font-size: 12px;
     padding: calc(var(--window-padding) / 2);

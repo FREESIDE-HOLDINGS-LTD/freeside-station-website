@@ -50,7 +50,7 @@ a {
   --window-padding: 20px;
 }
 
-@media (max-width: 1200px) or (max-height: 700px) {
+@media (max-width: $media-query-one-column-max-width) or (max-height: $media-query-one-column-max-height) {
   .body, html, #app {
     height: auto;
     overflow: scroll;
