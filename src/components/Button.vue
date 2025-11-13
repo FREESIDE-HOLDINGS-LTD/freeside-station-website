@@ -19,6 +19,7 @@ export default defineComponent({
   border: 1px solid var(--white);
   color: var(--white);
   text-transform: uppercase;
+  font-family: inherit;
   font-size: inherit;
 }
 </style>
