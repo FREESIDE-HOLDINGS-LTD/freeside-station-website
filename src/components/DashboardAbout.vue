@@ -1,10 +1,10 @@
 <template>
   <Window class="dashboard-about">
     <WindowTitle>
-      Freeside Station
+      Freeside<span class="blink"> - Why wait?</span>
     </WindowTitle>
     <WindowContent>
-      <div>Build 19840701, copyright <span class="japanese">営団</span>Freeside</div>
+      <div>Build 19840701, <span class="japanese">営団</span>Freeside</div>
       <div>{{ slogan }}</div>
     </WindowContent>
   </Window>
@@ -26,14 +26,12 @@ export default defineComponent({
   computed: {
     slogan(): string {
       const slogans = [
-        'Why wait?',
         'High tech/low life',
         'Even those who are in fear missing out!',
         'Don\'t believe his lies!',
         'From Bell Labs.',
         'Expires 1995.',
         'We just wanted a table.',
-        '100% Mothra-compatible!',
       ];
       return slogans[Math.floor(Math.random() * slogans.length)];
     },
@@ -42,15 +40,12 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-table {
-  width: 100%;
-
-  td:first-child {
-    text-align: left;
-  }
-
-  td:last-child {
-    text-align: right;
+.blink {
+  animation: blink-animation 2s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
   }
 }
 
