@@ -12,10 +12,10 @@
             </td>
             <td>
               <Green v-if="!playing">
-                stby
+                STBY
               </Green>
               <Green v-if="playing">
-                playing
+                PLAYING
               </Green>
             </td>
           </tr>

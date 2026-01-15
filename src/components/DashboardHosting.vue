@@ -11,7 +11,7 @@
               <a href="https://freeside.ltd">freeside.ltd</a>
             </td>
             <td>
-              <Green>live</Green>
+              <Green>LIVE</Green>
             </td>
           </tr>
           <tr>
@@ -19,7 +19,7 @@
               <a href="https://industries.freeside.ltd">industries.freeside.ltd</a>
             </td>
             <td>
-              <Green>live</Green>
+              <Green>LIVE</Green>
             </td>
           </tr>
         </tbody>

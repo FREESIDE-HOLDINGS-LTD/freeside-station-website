@@ -21,7 +21,7 @@
               Attitude control
             </td>
             <td>
-              <Green>online</Green>
+              <Green>ONLINE</Green>
             </td>
           </tr>
           <tr>
@@ -29,7 +29,7 @@
               Orbit change
             </td>
             <td>
-              <Green>scheduled</Green>
+              <Green>SCHEDULED</Green>
             </td>
           </tr>
           <tr>
@@ -37,7 +37,7 @@
               Life support
             </td>
             <td>
-              <Green>online</Green>
+              <Green>ONLINE</Green>
             </td>
           </tr>
           <tr>
@@ -45,7 +45,7 @@
               Pool on the roof
             </td>
             <td>
-              <Red>leaking</Red>
+              <Red>LEAKING</Red>
             </td>
           </tr>
           <tr>
@@ -53,7 +53,7 @@
               Isopod colony
             </td>
             <td>
-              <Green>nominal</Green>
+              <Green>NOMINAL</Green>
             </td>
           </tr>
           <tr>
@@ -61,7 +61,7 @@
               Dome
             </td>
             <td>
-              <Green>banging</Green>
+              <Green>BANGING</Green>
             </td>
           </tr>
         </tbody>

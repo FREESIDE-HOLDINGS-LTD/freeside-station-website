@@ -11,7 +11,7 @@
             <i>e</i>
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         <tr>
@@ -19,7 +19,7 @@
             <i>a</i>
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         <tr>
@@ -27,7 +27,7 @@
             <i>i</i>
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         <tr>
@@ -35,7 +35,7 @@
             Ω
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@
             <i>ω</i>
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
             M
           </td>
           <td>
-            <Red>restricted</Red>
+            <Red>RESTRICTED</Red>
           </td>
         </tr>
         </tbody>
