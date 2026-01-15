@@ -22,7 +22,9 @@
           {{ flight.number() }}
         </td>
         <td>
-          {{ flight.direction() }}
+          <span v-for="(part, index) in flight.direction()" :key="part">
+            <span v-if="part">{{ part }}</span><Red v-else>REDACTED</Red><span v-if="index !== flight.direction().length - 1">, </span>
+          </span>
         </td>
         <td>
           {{ flight.pad() }}

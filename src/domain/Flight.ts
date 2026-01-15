@@ -5,7 +5,7 @@ export class Flight {
   constructor(private event: Event) {
   }
 
-  direction(): string {
+  direction(): (undefined|string)[] {
     return this.event.location;
   }
 
