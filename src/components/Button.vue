@@ -16,8 +16,8 @@ export default defineComponent({
 .button {
   background-color: transparent;
   padding: 1em;
-  border: 1px solid var(--white);
-  color: var(--white);
+  border: 1px solid $white;
+  color: $white;
   text-transform: uppercase;
   font-family: inherit;
   font-size: inherit;

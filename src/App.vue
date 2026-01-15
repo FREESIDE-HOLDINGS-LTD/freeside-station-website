@@ -12,7 +12,7 @@
 }
 
 body, html {
-  background-color: var(--color-background);
+  background-color: $color-background;
   margin: 0;
   padding: 0;
 }
@@ -28,26 +28,11 @@ body, html, #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--color-foreground);
+  color: $color-foreground;
 }
 
 a {
-  color: var(--color-foreground);
-}
-
-:root {
-  --white: #fff;
-  --black: #000;
-  --red: #c0392b;
-  --green: #27ae60;
-  --yellow: #f39c12;
-
-  --color-background: var(--black);
-  --color-foreground: var(--white);
-
-  --window-border-color: var(--white);
-  --window-border-thickness: 1px;
-  --window-padding: 20px;
+  color: $color-foreground;
 }
 
 @media (max-width: $media-query-one-column-max-width) or (max-height: $media-query-one-column-max-height) {

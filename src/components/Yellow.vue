@@ -14,7 +14,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .yellow {
-  color: var(--yellow);
+  color: $yellow;
   font-weight: bold;
 }
 </style>

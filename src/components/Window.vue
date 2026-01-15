@@ -17,7 +17,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .window {
   box-sizing: border-box;
-  padding: calc(var(--window-padding) / 2);
+  padding: calc($window-padding / 2);
   overflow-y: hidden;
   overflow-x: hidden;
 
@@ -25,7 +25,7 @@ export default defineComponent({
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    border: var(--window-border-thickness) solid var(--window-border-color);
+    border: $window-border-thickness solid $window-border-color;
     overflow-y: scroll;
     overflow-x: hidden;
 
@@ -36,7 +36,7 @@ export default defineComponent({
 
 @media (max-width: $media-query-squeeze-max-width) or (max-height: $media-query-squeeze-max-height) {
   .window {
-    padding: calc(var(--window-padding) / 4);
+    padding: calc($window-padding / 4);
   }
 }
 </style>

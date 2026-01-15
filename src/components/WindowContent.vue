@@ -15,12 +15,12 @@ export default defineComponent({
 <style scoped lang="scss">
 .window-content {
   flex: 1;
-  padding: var(--window-padding);
+  padding: $window-padding;
 }
 
 @media (max-width: $media-query-squeeze-max-width) or (max-height: $media-query-squeeze-max-height) {
   .window-content {
-    padding: calc(var(--window-padding) / 4);
+    padding: calc($window-padding / 4);
   }
 }
 </style>
