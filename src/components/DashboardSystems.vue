@@ -64,6 +64,14 @@
               <Green>BANGING</Green>
             </td>
           </tr>
+          <tr>
+            <td>
+              Puerto Rico
+            </td>
+            <td>
+              <Red>OFFENSIVE</Red>
+            </td>
+          </tr>
         </tbody>
       </table>
     </WindowContent>
