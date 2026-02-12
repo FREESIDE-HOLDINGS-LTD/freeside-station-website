@@ -14,7 +14,7 @@ website:
 
 .PHONY: website-docker
 website-docker:
-	docker build --output type=local,dest=./dist .
+	sudo docker build --output type=local,dest=./dist .
 
 .PHONY: push
 push:
