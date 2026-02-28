@@ -22,6 +22,14 @@
               <Green>LIVE</Green>
             </td>
           </tr>
+          <tr>
+            <td>
+              <a href="https://webmail.freeside.ltd">webmail.freeside.ltd</a>
+            </td>
+            <td>
+              <Green>LIVE</Green>
+            </td>
+          </tr>
         </tbody>
       </table>
     </WindowContent>
