@@ -12,7 +12,7 @@ export const events: Event[] = [
     name: 'Chaos Communication Congress',
     start: { year: 2026, month: 12, day: 27 },
     end: { year: 2026, month: 12, day: 30 },
-    location: [undefined, 'Germany'],
+    location: ['Hamburg', 'Germany'],
   },
   {
     name: 'Electromagnetic Field',
