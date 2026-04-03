@@ -21,6 +21,12 @@ export const events: Event[] = [
     location: ['Eastnor', 'United Kingdom'],
   },
   {
+    name: 'Revision',
+    start: { year: 2026, month: 4, day: 3 },
+    end: { year: 2026, month: 4, day: 6 },
+    location: ['Saarbrücken', 'Germany'],
+  },
+  {
     name: 'Chaos Communication Congress',
     start: { year: 2025, month: 12, day: 27 },
     end: { year: 2025, month: 12, day: 30 },
